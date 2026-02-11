@@ -1,0 +1,24 @@
+{
+    "floor": 1,
+    "eventType": "RecolorTrack",
+    "startTile": [
+        0,
+        "ThisTile"
+    ],
+    "endTile": [
+        0,
+        "ThisTile"
+    ],
+    "gapLength": 0,
+    "duration": 0,
+    "trackColorType": "Single",
+    "trackColor": "debb7bff",
+    "secondaryTrackColor": "ffffffff",
+    "trackColorAnimDuration": 2,
+    "trackColorPulse": "None",
+    "trackPulseLength": 10,
+    "trackStyle": "Minimal",
+    "trackGlowIntensity": 100,
+    "angleOffset": 0,
+    "eventTag": ""
+}
