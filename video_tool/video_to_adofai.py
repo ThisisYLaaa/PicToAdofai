@@ -1,14 +1,14 @@
-# 视频转ADOFai模块
+# 视频转ADOFAI模块
 from common.Logger import get_logger
-logger = get_logger("视频转ADOFai")
+logger = get_logger("视频转ADOFAI")
 
 from typing import Optional
 import json
 from image_tool.image_processor import ImageProcessor
 
-class VideoToADOFai:
+class VideoToADOFAI:
     def __init__(self):
-        """初始化视频转ADOFai转换器"""
+        """初始化视频转ADOFAI转换器"""
         self.image_processor = ImageProcessor()
         self.angleData = []
         self.actions = []
@@ -280,7 +280,7 @@ class VideoToADOFai:
     
     def convert(self, frames: list[tuple[list[list[tuple]], int, int]], fps: float, output_path: str, diff_threshold: float = 10.0):
         """执行转换过程"""
-        logger.info("开始执行视频到ADOFai的转换")
+        logger.info("开始执行视频到ADOFAI的转换")
         
         try:
             # 生成关卡数据

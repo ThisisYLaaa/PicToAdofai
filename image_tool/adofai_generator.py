@@ -1,4 +1,4 @@
-# ADOFai关卡生成模块
+# ADOFAI关卡生成模块
 from common.Logger import get_logger
 logger = get_logger("关卡生成")
 
@@ -7,7 +7,7 @@ from image_tool.image_processor import ImageProcessor
 
 class ADOFAIGenerator:
     def __init__(self, pixel_data: list[list[tuple]], width: int, height: int):
-        """初始化ADOFai生成器"""
+        """初始化ADOFAI生成器"""
         self.pixel_data = pixel_data
         self.width = width
         self.height = height

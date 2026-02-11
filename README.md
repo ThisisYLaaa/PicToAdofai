@@ -1,29 +1,34 @@
-# PicToAF - 图片和视频转ADOFai关卡工具
+# PicToAdofai - 图片和视频转ADOFAI关卡工具
+
+## 前言
+
+- AI生成的, 不太靠谱
+- 说实话那个预览第一帧没啥用, 可以当不存在
 
 ## 项目概述
 
-PicToAF是一个用于将图片和视频转换为ADOFai（A Dance of Fire and Ice）关卡文件的工具集。该项目包含两个主要工具：
+PicToAdofai是一个用于将图片和视频转换为ADOFAI（A Dance of Fire and Ice）关卡文件的工具集。该项目包含两个主要工具：
 
-1. **图片转ADOFai工具**：将静态图片转换为ADOFai关卡文件
-2. **视频转ADOFai工具**：将视频文件转换为ADOFai关卡文件，支持逐帧处理
+1. **图片转ADOFAI工具**：将静态图片转换为ADOFAI关卡文件
+2. **视频转ADOFAI工具**：将视频文件转换为ADOFAI关卡文件，支持逐帧处理
 
 ## 项目结构
 
 ```
-PicToAF/
+PicToAdofai/
 ├── common/            # 共用文件
 │   ├── Logger.py      # 日志工具
 │   ├── Parser.py      # 解析工具
 │   └── __init__.py
 ├── image_tool/        # 图片工具实现
 │   ├── __init__.py
-│   ├── adofai_generator.py  # ADOFai关卡生成器
+│   ├── adofai_generator.py  # ADOFAI关卡生成器
 │   └── image_processor.py   # 图片处理器
 ├── video_tool/        # 视频工具实现
 │   ├── __init__.py
 │   ├── torch_video_processor.py  # PyTorch视频处理器
 │   ├── video_processor.py        # 传统视频处理器
-│   └── video_to_adofai.py        # 视频转ADOFai工具
+│   └── video_to_adofai.py        # 视频转ADOFAI工具
 ├── output/            # 产物文件夹
 ├── main.py            # 图片工具入口
 ├── video_main.py      # 视频工具入口
@@ -33,13 +38,13 @@ PicToAF/
 
 ## 功能特点
 
-### 图片转ADOFai工具
+### 图片转ADOFAI工具
 - 支持多种图片格式（PNG、JPG、JPEG、BMP、GIF）
 - 可调整最大像素数，控制关卡复杂度
-- 自动将图片转换为ADOFai关卡格式
+- 自动将图片转换为ADOFAI关卡格式
 - 生成包含颜色信息的关卡文件
 
-### 视频转ADOFai工具
+### 视频转ADOFAI工具
 - 支持多种视频格式（MP4、AVI、MOV、WMV、MKV）
 - 提供两种处理引擎：
   - PyTorch引擎（GPU加速，处理速度更快）
@@ -73,7 +78,7 @@ PicToAF/
 
 ## 使用方法
 
-### 图片转ADOFai工具
+### 图片转ADOFAI工具
 
 1. 运行图片工具：
    ```bash
@@ -86,9 +91,9 @@ PicToAF/
    - 选择输出文件路径
    - 点击"开始转换"按钮
 
-3. 转换完成后，会显示转换结果信息，并在指定路径生成ADOFai关卡文件
+3. 转换完成后，会显示转换结果信息，并在指定路径生成ADOFAI关卡文件
 
-### 视频转ADOFai工具
+### 视频转ADOFAI工具
 
 1. 运行视频工具：
    ```bash
@@ -106,7 +111,7 @@ PicToAF/
 
 3. 转换过程中会显示进度条和当前状态
 
-4. 转换完成后，会显示转换结果信息，并在指定路径生成ADOFai关卡文件
+4. 转换完成后，会显示转换结果信息，并在指定路径生成ADOFAI关卡文件
 
 ## 注意事项
 

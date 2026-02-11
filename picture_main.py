@@ -13,11 +13,11 @@ from io import StringIO
 from image_tool.image_processor import ImageProcessor
 from image_tool.adofai_generator import ADOFAIGenerator
 
-class ImageToADOFaiApp:
+class ImageToADOFAIApp:
     def __init__(self):
         # 创建主窗口
         self.root = ttk.Window(themename="darkly")
-        self.root.title("图片转ADOFai关卡")
+        self.root.title("图片转ADOFAI关卡")
         self.root.geometry("800x600")
         
         # 初始化变量
@@ -109,10 +109,10 @@ class ImageToADOFaiApp:
     def select_output(self):
         """选择输出文件路径"""
         file_path = filedialog.asksaveasfilename(
-            title="保存ADOFai关卡",
+            title="保存ADOFAI关卡",
             defaultextension=".adofai",
             filetypes=[
-                ("ADOFai关卡文件", "*.adofai"),
+                ("ADOFAI关卡文件", "*.adofai"),
                 ("所有文件", "*.*")
             ]
         )
@@ -161,7 +161,7 @@ class ImageToADOFaiApp:
     def convert(self):
         """执行转换过程"""
         try:
-            logger.info("开始转换图片到ADOFai关卡")
+            logger.info("开始转换图片到ADOFAI关卡")
             
             # 处理图片
             pixel_data, width, height = self.image_processor.process_image(
@@ -205,5 +205,5 @@ class ImageToADOFaiApp:
         self.root.mainloop()
 
 if __name__ == "__main__":
-    app = ImageToADOFaiApp()
+    app = ImageToADOFAIApp()
     app.run()

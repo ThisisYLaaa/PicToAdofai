@@ -1,7 +1,7 @@
-# 视频转ADOFai工具主界面
+# 视频转ADOFAI工具主界面
 import os
 from common.Logger import get_logger
-logger = get_logger("视频转ADOFai主界面")
+logger = get_logger("视频转ADOFAI主界面")
 
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import BOTH, YES, LEFT, RIGHT, X, Y
@@ -13,14 +13,14 @@ import cv2
 
 from video_tool.video_processor import VideoProcessor
 from video_tool.torch_video_processor import TorchVideoProcessor
-from video_tool.video_to_adofai import VideoToADOFai
+from video_tool.video_to_adofai import VideoToADOFAI
 
-class VideoToADOFaiApp:
+class VideoToADOFAIApp:
     def __init__(self):
-        """初始化视频转ADOFai应用"""
+        """初始化视频转ADOFAI应用"""
         # 创建主窗口
         self.root = ttk.Window(themename="darkly")
-        self.root.title("视频转ADOFai关卡")
+        self.root.title("视频转ADOFAI关卡")
         self.root.geometry("1000x700")
         
         # 初始化变量
@@ -35,7 +35,7 @@ class VideoToADOFaiApp:
         # 初始化处理器
         self.video_processor = None
         self.torch_video_processor = None
-        self.video_to_adofai = VideoToADOFai()
+        self.video_to_adofai = VideoToADOFAI()
         
         # 初始化处理器实例
         self._init_processors()
@@ -249,10 +249,10 @@ class VideoToADOFaiApp:
     def select_output(self):
         """选择输出文件路径"""
         file_path = filedialog.asksaveasfilename(
-            title="保存ADOFai关卡",
+            title="保存ADOFAI关卡",
             defaultextension=".adofai",
             filetypes=[
-                ("ADOFai关卡文件", "*.adofai"),
+                ("ADOFAI关卡文件", "*.adofai"),
                 ("所有文件", "*.*")
             ]
         )
@@ -379,7 +379,7 @@ class VideoToADOFaiApp:
     def convert(self):
         """执行转换过程"""
         try:
-            logger.info("开始转换视频到ADOFai关卡")
+            logger.info("开始转换视频到ADOFAI关卡")
             
             # 更新进度
             self.root.after(0, lambda: self.update_progress(10, "加载视频..."))
@@ -434,9 +434,9 @@ class VideoToADOFaiApp:
                 self.root.after(0, lambda: self.update_progress(50, f"处理完成 {frame_count} 帧"))
             
             # 生成关卡
-            self.root.after(0, lambda: self.update_progress(70, "生成ADOFai关卡..."))
+            self.root.after(0, lambda: self.update_progress(70, "生成ADOFAI关卡..."))
             
-            video_to_adofai = VideoToADOFai()
+            video_to_adofai = VideoToADOFAI()
             success = video_to_adofai.convert(
                 processed_frames, 
                 self.target_fps, 
@@ -477,9 +477,9 @@ class VideoToADOFaiApp:
     
     def run(self):
         """运行应用程序"""
-        logger.info("启动视频转ADOFai应用")
+        logger.info("启动视频转ADOFAI应用")
         self.root.mainloop()
 
 if __name__ == "__main__":
-    app = VideoToADOFaiApp()
+    app = VideoToADOFAIApp()
     app.run()

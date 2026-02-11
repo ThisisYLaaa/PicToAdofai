@@ -73,7 +73,7 @@ class ImageProcessor:
     def rgba_to_hex(self, rgba: tuple) -> str:
         """将RGBA元组转换为16进制字符串，不带#号"""
         r, g, b, a = rgba
-        # ADOFai使用的是RGB，忽略Alpha通道
+        # ADOFAI使用的是RGB，忽略Alpha通道
         return f"{r:02x}{g:02x}{b:02x}"
     
     def process_image(self, file_path: str, max_pixels: int) -> tuple[list[list[tuple]], int, int]:
